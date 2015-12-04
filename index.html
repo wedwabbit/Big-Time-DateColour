@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Big Date+Time Colour</title>
+	<link rel='stylesheet' type='text/css' href='/pebble-slate/dist/css/slate.min.css'>
+</head>
+<body>
+
+	<div class='item-container' align="center">
+		<div class='item-container-content'>
+			<div class='item'>
+				Big Date+Time Colour
+			</div>
+		</div>
+	</div>
+	<div class='item-container'>
+		<div class='item-container-header'>Time</div>
+		<div class='item-container-content'>
+			<label class='item'>
+				Background Colour
+				<input id='timebackground' type='text' class='item-color item-color-sunny' value='#000000'>
+			</label>
+			<label class='item'>
+				Digit Colour
+				<input id='timeforeground' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
+			</label>
+		</div>
+		<div class='item-container-footer'>Colours of the background and digits when the TIME is displayed.</div>
+	</div>
+	<div class='item-container'>
+		<div class='item-container-header'>Date</div>
+		<div class='item-container-content'>
+			<label class='item'>
+				Background Colour
+				<input id='datebackground' type='text' class='item-color item-color-sunny' value='#000000'>
+			</label>
+			<label class='item'>
+				Digit Colour
+				<input id='dateforeground' type='text' class='item-color item-color-sunny' value='#FFFFFF'>
+			</label>
+		</div>
+		<div class='item-container-footer'>Colours of the background and digits when the DATE is displayed.</div>
+	</div>
+	<div class='item-container'>
+		<div class='item-container-header'>Date Timeout</div>
+		<div class='item-container-content'>
+			<label class='item'>
+				Date Timeout in Seconds
+				<select name='datetimeout' id='datetimeout' dir='rtl' class='item-select'>
+                    <option class='item-select-option' value='1' selected>1</option>
+                    <option class='item-select-option' value='2'>2</option>
+                    <option class='item-select-option' value='3'>3</option>
+                    <option class='item-select-option' value='4'>4</option>
+                    <option class='item-select-option' value='5'>5</option>
+                </select>
+			</label>
+		</div>
+		<div class='item-container-footer'>Length of time the DATE is displayed.</div>
+	</div>
+	<div class='item-container'>
+		<div class='button-container'>
+			<input id='submitButton' type='button' class='item-button' value='SUBMIT'>
+		</div>
+	</div>
+	<script src='/pebble-slate/dist/js/slate.min.js'></script>
+    <script src='/js/main.js'></script>
+</body>
+</html>
