@@ -1,7 +1,7 @@
 #include <pebble.h>
 #include "gbitmap_color_palette_manipulator.h"
 
-#define SHOW_APP_LOGS
+//#define SHOW_APP_LOGS
 
 static Window *s_main_window;
 static AppTimer *app_timer;
@@ -48,11 +48,17 @@ static void load_digit_image_into_slot(int slot_number, int digit_value, int for
 
   s_image_slot_state[slot_number] = digit_value;
   s_images[slot_number] = gbitmap_create_with_resource(IMAGE_RESOURCE_IDS[digit_value]);
+  #ifdef SHOW_APP_LOGS
+     APP_LOG(APP_LOG_LEVEL_DEBUG, "%d, %d", foreground_colour, background_colour);
+  #endif
 
   // If requested background is white then replace the existing white digit with a red placeholder, replace
   // the black background with white, and then replace the red placeholder with the requested colour.
   // Note: use the gbitmap_fill_all_except first to get rid of any stray colours.
   if(gcolor_equal(GColorFromHEX(background_colour), GColorWhite)) {
+      #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "White background.");
+      #endif
       gbitmap_fill_all_except(GColorBlack, GColorRed, false, s_images[slot_number], NULL);
       replace_gbitmap_color(GColorBlack, GColorWhite, s_images[slot_number], NULL);
       replace_gbitmap_color(GColorRed, GColorFromHEX(foreground_colour), s_images[slot_number], NULL);
@@ -60,12 +66,18 @@ static void load_digit_image_into_slot(int slot_number, int digit_value, int for
   // Requested foreground is black then replace the existing black background with a red placeholder, replace
   // the white digit with black, and then replace the red placeholder with the requested colour.
   else if(gcolor_equal(GColorFromHEX(foreground_colour), GColorBlack)) {
+      #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "Black foreground.");
+      #endif
       gbitmap_fill_all_except(GColorWhite, GColorRed, false, s_images[slot_number], NULL);
       replace_gbitmap_color(GColorWhite, GColorBlack, s_images[slot_number], NULL);
       replace_gbitmap_color(GColorRed, GColorFromHEX(background_colour), s_images[slot_number], NULL);
   }
   // Replace the black background with the requested background and the white digit with the requested foreground.
   else {
+      #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "Other background/foreground.");
+      #endif
       gbitmap_fill_all_except(GColorWhite, GColorFromHEX(background_colour), false, s_images[slot_number], NULL);
       replace_gbitmap_color(GColorWhite, GColorFromHEX(foreground_colour), s_images[slot_number], NULL);
   }
@@ -103,26 +115,34 @@ static void display_value(unsigned short value, unsigned short row_number, bool 
 
   // Get the colours of the displayed values.
   if(isdate) {
-    if(!(background_colour = persist_read_int(KEY_DATEBACKGROUND))) {
-        // There was no saved preference so set a default of black.
-        background_colour = 0x000000;
-    }
-    if(!(foreground_colour = persist_read_int(KEY_DATEFOREGROUND))) {
-        // There was no saved preference so set a default white.
-        foreground_colour = 0xFFFFFF;
-    }
+    if(persist_read_int(KEY_DATEBACKGROUND))
+        background_colour = persist_read_int(KEY_DATEBACKGROUND);
+    else
+        background_colour = 0x000000; // There was no saved preference so set a default of black.
+    if(persist_read_int(KEY_DATEFOREGROUND))
+        foreground_colour = persist_read_int(KEY_DATEFOREGROUND);
+    else
+        foreground_colour = 0x000000; // There was no saved preference so set a default black.
   }
   else {
-    if(!(background_colour = persist_read_int(KEY_TIMEBACKGROUND))) {
-        // There was no saved preference so set a default of white.
-        background_colour = 0xFFFFFF;
-    }
-    if(!(foreground_colour = persist_read_int(KEY_TIMEFOREGROUND))) {
-        // There was no saved preference so set a default of black.
-        foreground_colour = 0x000000;
-    }
+    if(persist_read_int(KEY_TIMEBACKGROUND))
+        background_colour = persist_read_int(KEY_TIMEBACKGROUND);
+    else
+        background_colour = 0x000000; // There was no saved preference so set a default of black.
+    if(persist_read_int(KEY_TIMEFOREGROUND))
+        foreground_colour = persist_read_int(KEY_TIMEFOREGROUND);
+    else
+        foreground_colour = 0x000000; // There was no saved preference so set a default of black.
   }
 
+  // If the foreground and background colours are the same then invert the background colour.
+  if(foreground_colour == background_colour)
+      background_colour = ~background_colour; 
+
+  #ifdef SHOW_APP_LOGS
+     APP_LOG(APP_LOG_LEVEL_DEBUG, "%d, %d", foreground_colour, background_colour);
+  #endif
+     
   value = value % 100; // Maximum of two digits per row.
 
   // Column order is: | Column 0 | Column 1 |
@@ -218,28 +238,47 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
   Tuple *dateforeground_t = dict_find(iter, KEY_DATEFOREGROUND);
   Tuple *datetimeout_t = dict_find(iter, KEY_DATETIMEOUT);
 
+  int colour;
+
   // Retrieve the values passed in and store them in persistent storage.
   if (timebackground_t) {
-    persist_write_int(KEY_TIMEBACKGROUND, timebackground_t->value->int32);
+    colour = timebackground_t->value->int32;
+    persist_write_int(KEY_TIMEBACKGROUND, colour);
+    #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "TBG inbox: %ld, %ld", timebackground_t->value->int32, persist_read_int(KEY_TIMEBACKGROUND));
+    #endif
   }
 
   if (timeforeground_t) {
-    persist_write_int(KEY_TIMEFOREGROUND, timeforeground_t->value->int32);
+    colour = timeforeground_t->value->int32;
+    persist_write_int(KEY_TIMEFOREGROUND, colour);
+    #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "TFG inbox: %ld, %ld", timeforeground_t->value->int32, persist_read_int(KEY_TIMEFOREGROUND));
+    #endif
   }
 
   if (datebackground_t) {
-    persist_write_int(KEY_DATEBACKGROUND, datebackground_t->value->int32);
+    colour = datebackground_t->value->int32;
+    persist_write_int(KEY_DATEBACKGROUND, colour);
+    #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "DBG inbox: %ld, %ld", datebackground_t->value->int32, persist_read_int(KEY_DATEBACKGROUND));
+    #endif
   }
 
   if (dateforeground_t) {
-    persist_write_int(KEY_DATEFOREGROUND, dateforeground_t->value->int32);
+    colour = dateforeground_t->value->int32;
+    persist_write_int(KEY_DATEFOREGROUND, colour);
+    #ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "DFG inbox: %ld, %ld", dateforeground_t->value->int32, persist_read_int(KEY_DATEFOREGROUND));
+    #endif
   }
 
   if (datetimeout_t) {
+    colour = datetimeout_t->value->int32;
+    persist_write_int(KEY_DATETIMEOUT, colour);
     #ifdef SHOW_APP_LOGS
-        APP_LOG(APP_LOG_LEVEL_DEBUG, "%ld", datetimeout_t->value->int32);
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "DTO inbox: %ld, %ld", datetimeout_t->value->int32, persist_read_int(KEY_DATETIMEOUT));
     #endif
-    persist_write_int(KEY_DATETIMEOUT, datetimeout_t->value->int32);
   }
 
   time_t now = time(NULL);
