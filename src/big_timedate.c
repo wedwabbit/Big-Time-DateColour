@@ -154,6 +154,10 @@ static void display_value(unsigned short value, unsigned short row_number, bool 
     if (!((value == 0) && (column_number == 0) && !show_first_leading_zero)) {
       load_digit_image_into_slot(slot_number, value % 10, foreground_colour, background_colour);
     }
+    else {
+        // Load a blank tile.
+        load_digit_image_into_slot(slot_number, 0, background_colour, background_colour);
+    }
     value = value / 10;
   }
 }
