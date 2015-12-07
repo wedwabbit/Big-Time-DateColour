@@ -242,8 +242,10 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
     Tuple *datebackground_t = dict_find(iter, KEY_DATEBACKGROUND);
     Tuple *dateforeground_t = dict_find(iter, KEY_DATEFOREGROUND);
     Tuple *datetimeout_t = dict_find(iter, KEY_DATETIMEOUT);
+    Tuple *dateenabled_t = dict_find(iter, KEY_DATEENABLED);
 
     int colour;
+    int dateenabled;
 
     // Retrieve the values passed in and store them in persistent storage.
     if (timebackground_t) {
@@ -284,6 +286,19 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
 #ifdef SHOW_APP_LOGS
         APP_LOG(APP_LOG_LEVEL_DEBUG, "DTO inbox: %ld, %ld", datetimeout_t->value->int32, persist_read_int(KEY_DATETIMEOUT));
 #endif
+    }
+
+    if (dateenabled_t) {
+        dateenabled = dateenabled_t->value->int8;
+        persist_write_int(KEY_DATEENABLED, dateenabled);
+#ifdef SHOW_APP_LOGS
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "DE inbox: %d, %d", dateenabled_t->value->int8, persist_read_int(KEY_DATEENABLED));
+#endif
+        if(persist_read_int(KEY_DATEENABLED))
+            accel_tap_service_subscribe(tap_handler);
+        else
+            accel_tap_service_unsubscribe();
+
     }
 
     time_t now = time(NULL);
