@@ -4,7 +4,8 @@
         "dateforeground": 3,
         "datetimeout": 4,
         "timebackground": 0,
-        "timeforeground": 1
+        "timeforeground": 1,
+        "dateenabled": 5
     },
     "capabilities": [
         "configurable"
