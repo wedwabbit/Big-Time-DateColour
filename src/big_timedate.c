@@ -292,12 +292,23 @@ static void inbox_received_handler(DictionaryIterator *iter, void *context) {
         dateenabled = dateenabled_t->value->int8;
         persist_write_int(KEY_DATEENABLED, dateenabled);
 #ifdef SHOW_APP_LOGS
-        APP_LOG(APP_LOG_LEVEL_DEBUG, "DE inbox: %d, %d", dateenabled_t->value->int8, persist_read_int(KEY_DATEENABLED));
+        APP_LOG(APP_LOG_LEVEL_DEBUG, "DE inbox: %zu, %ld", dateenabled_t->value->int8, persist_read_int(KEY_DATEENABLED));
 #endif
-        if(persist_read_int(KEY_DATEENABLED))
+        // If the user has enabled date then subscribe to the tap service (will have no affect if already subscribed).
+        // If disabled then unsubscribe from the service (again no affect if already unsubscribed).
+        if(!persist_read_int(KEY_DATEENABLED))
+        {
+#ifdef SHOW_APP_LOGS
+            APP_LOG(APP_LOG_LEVEL_DEBUG, "accel_tap_service_subscribe");
+#endif
             accel_tap_service_subscribe(tap_handler);
-        else
+        }
+        else {
+#ifdef SHOW_APP_LOGS
+            APP_LOG(APP_LOG_LEVEL_DEBUG, "accel_tap_service_unsubscribe");
+#endif
             accel_tap_service_unsubscribe();
+        }
 
     }
 
