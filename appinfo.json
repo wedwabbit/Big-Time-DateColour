@@ -5,7 +5,8 @@
         "dateforeground": 3,
         "datetimeout": 4,
         "timebackground": 0,
-        "timeforeground": 1
+        "timeforeground": 1,
+        "fonttype": 6
     },
     "capabilities": [
         "configurable"
@@ -18,61 +19,51 @@
             {
                 "file": "images/BIG_0_wh.png",
                 "name": "IMAGE_NUM_0_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_9_wh.png",
                 "name": "IMAGE_NUM_9_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_8_wh.png",
                 "name": "IMAGE_NUM_8_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_7_wh.png",
                 "name": "IMAGE_NUM_7_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_6_wh.png",
-                "name": "IMAGE_NUM_0_BA",
-                "targetPlatforms": null,
+                "name": "IMAGE_NUM_6_BA",
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_5_wh.png",
                 "name": "IMAGE_NUM_5_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_4_wh.png",
                 "name": "IMAGE_NUM_4_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_3_wh.png",
                 "name": "IMAGE_NUM_3_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_2_wh.png",
                 "name": "IMAGE_NUM_2_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
                 "file": "images/BIG_1_wh.png",
                 "name": "IMAGE_NUM_1_BA",
-                "targetPlatforms": null,
                 "type": "bitmap"
             },
             {
@@ -139,7 +130,7 @@
         "basalt"
     ],
     "uuid": "0ab44772-4fc2-45f5-981d-0014f2f5f7b7",
-    "versionLabel": "1.4",
+    "versionLabel": "1.5",
     "watchapp": {
         "watchface": true
     }

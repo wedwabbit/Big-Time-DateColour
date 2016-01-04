@@ -2,8 +2,8 @@ Pebble.addEventListener('ready', function() {
 });
 
 Pebble.addEventListener('showConfiguration', function() {
-    var url = 'http://wedwabbit.github.io/index-bigtimedatecolour.html';
-    // var url = 'http://localhost:8080/index-bigtimedatecolour.html';
+    //var url = 'http://wedwabbit.github.io/index-bigtimedatecolour.html';
+    var url = 'http://localhost:8080/index-bigtimedatecolour.html';
 	Pebble.openURL(url);
 });
 
@@ -16,7 +16,8 @@ Pebble.addEventListener('webviewclosed', function(e) {
           datebackground: parseInt(configData.datebackground, 16),
           dateforeground: parseInt(configData.dateforeground, 16),
           datetimeout: parseInt(configData.datetimeout, 16),
-          dateenabled: configData.dateenabled
+          dateenabled: configData.dateenabled,
+          fonttype:  parseInt(configData.fonttype, 16)
         }, function() {
         }, function() {
         });
