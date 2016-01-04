@@ -2,8 +2,8 @@ Pebble.addEventListener('ready', function() {
 });
 
 Pebble.addEventListener('showConfiguration', function() {
-    //var url = 'http://wedwabbit.github.io/index-bigtimedatecolour.html';
-    var url = 'http://localhost:8080/index-bigtimedatecolour.html';
+    var url = 'http://wedwabbit.github.io/index-bigtimedatecolour.html';
+    //var url = 'http://localhost:8080/index-bigtimedatecolour.html';
 	Pebble.openURL(url);
 });
 
