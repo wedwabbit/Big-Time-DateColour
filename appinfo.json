@@ -1,11 +1,11 @@
 {
     "appKeys": {
         "datebackground": 2,
+        "dateenabled": 5,
         "dateforeground": 3,
         "datetimeout": 4,
         "timebackground": 0,
-        "timeforeground": 1,
-        "dateenabled": 5
+        "timeforeground": 1
     },
     "capabilities": [
         "configurable"
@@ -16,68 +16,127 @@
     "resources": {
         "media": [
             {
+                "file": "images/BIG_0_wh.png",
+                "name": "IMAGE_NUM_0_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_9_wh.png",
+                "name": "IMAGE_NUM_9_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_8_wh.png",
+                "name": "IMAGE_NUM_8_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_7_wh.png",
+                "name": "IMAGE_NUM_7_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_6_wh.png",
+                "name": "IMAGE_NUM_0_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_5_wh.png",
+                "name": "IMAGE_NUM_5_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_4_wh.png",
+                "name": "IMAGE_NUM_4_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_3_wh.png",
+                "name": "IMAGE_NUM_3_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_2_wh.png",
+                "name": "IMAGE_NUM_2_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
+                "file": "images/BIG_1_wh.png",
+                "name": "IMAGE_NUM_1_BA",
+                "targetPlatforms": null,
+                "type": "bitmap"
+            },
+            {
                 "file": "images/num_9.png",
                 "name": "IMAGE_NUM_9",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_8.png",
                 "name": "IMAGE_NUM_8",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_7.png",
                 "name": "IMAGE_NUM_7",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_6.png",
                 "name": "IMAGE_NUM_6",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_5.png",
                 "name": "IMAGE_NUM_5",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_4.png",
                 "name": "IMAGE_NUM_4",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_3.png",
                 "name": "IMAGE_NUM_3",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_2.png",
                 "name": "IMAGE_NUM_2",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_1.png",
                 "name": "IMAGE_NUM_1",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/num_0.png",
                 "name": "IMAGE_NUM_0",
-                "type": "png"
+                "type": "bitmap"
             },
             {
                 "file": "images/big_timedate_menu.png",
                 "menuIcon": true,
                 "name": "big_timedate_menu",
-                "type": "png"
+                "type": "bitmap"
             }
         ]
     },
     "sdkVersion": "3",
     "shortName": "Big Time+Date Colour",
     "targetPlatforms": [
-        "basalt",
-        "chalk"
+        "basalt"
     ],
     "uuid": "0ab44772-4fc2-45f5-981d-0014f2f5f7b7",
     "versionLabel": "1.4",
