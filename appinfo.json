@@ -17,103 +17,353 @@
     "resources": {
         "media": [
             {
-                "file": "images/BIG_0_wh.png",
-                "name": "IMAGE_NUM_0_BA",
+                "file": "images/font2_0.png",
+                "name": "IMAGE_FONT2_0",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_9_wh.png",
-                "name": "IMAGE_NUM_9_BA",
+                "file": "images/font2_9.png",
+                "name": "IMAGE_FONT2_9",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_8_wh.png",
-                "name": "IMAGE_NUM_8_BA",
+                "file": "images/font2_8.png",
+                "name": "IMAGE_FONT2_8",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_7_wh.png",
-                "name": "IMAGE_NUM_7_BA",
+                "file": "images/font2_7.png",
+                "name": "IMAGE_FONT2_7",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_6_wh.png",
-                "name": "IMAGE_NUM_6_BA",
+                "file": "images/font2_6.png",
+                "name": "IMAGE_FONT2_6",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_5_wh.png",
-                "name": "IMAGE_NUM_5_BA",
+                "file": "images/font2_5.png",
+                "name": "IMAGE_FONT2_5",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_4_wh.png",
-                "name": "IMAGE_NUM_4_BA",
+                "file": "images/font2_4.png",
+                "name": "IMAGE_FONT2_4",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_3_wh.png",
-                "name": "IMAGE_NUM_3_BA",
+                "file": "images/font2_3.png",
+                "name": "IMAGE_FONT2_3",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_2_wh.png",
-                "name": "IMAGE_NUM_2_BA",
+                "file": "images/font2_2.png",
+                "name": "IMAGE_FONT2_2",
                 "type": "bitmap"
             },
             {
-                "file": "images/BIG_1_wh.png",
-                "name": "IMAGE_NUM_1_BA",
+                "file": "images/font2_1.png",
+                "name": "IMAGE_FONT2_1",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_9.png",
-                "name": "IMAGE_NUM_9",
+                "file": "images/font1_9.png",
+                "name": "IMAGE_FONT1_9",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_8.png",
-                "name": "IMAGE_NUM_8",
+                "file": "images/font1_8.png",
+                "name": "IMAGE_FONT1_8",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_7.png",
-                "name": "IMAGE_NUM_7",
+                "file": "images/font1_7.png",
+                "name": "IMAGE_FONT1_7",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_6.png",
-                "name": "IMAGE_NUM_6",
+                "file": "images/font1_6.png",
+                "name": "IMAGE_FONT1_6",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_5.png",
-                "name": "IMAGE_NUM_5",
+                "file": "images/font1_5.png",
+                "name": "IMAGE_FONT1_5",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_4.png",
-                "name": "IMAGE_NUM_4",
+                "file": "images/font1_4.png",
+                "name": "IMAGE_FONT1_4",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_3.png",
-                "name": "IMAGE_NUM_3",
+                "file": "images/font1_3.png",
+                "name": "IMAGE_FONT1_3",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_2.png",
-                "name": "IMAGE_NUM_2",
+                "file": "images/font1_2.png",
+                "name": "IMAGE_FONT1_2",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_1.png",
-                "name": "IMAGE_NUM_1",
+                "file": "images/font1_1.png",
+                "name": "IMAGE_FONT1_1",
                 "type": "bitmap"
             },
             {
-                "file": "images/num_0.png",
-                "name": "IMAGE_NUM_0",
+                "file": "images/font1_0.png",
+                "name": "IMAGE_FONT1_0",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_9.png",
+                "name": "IMAGE_FONT3_9",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_8.png",
+                "name": "IMAGE_FONT3_8",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_7.png",
+                "name": "IMAGE_FONT3_7",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_6.png",
+                "name": "IMAGE_FONT3_6",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_5.png",
+                "name": "IMAGE_FONT3_5",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_4.png",
+                "name": "IMAGE_FONT3_4",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_3.png",
+                "name": "IMAGE_FONT3_3",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_2.png",
+                "name": "IMAGE_FONT3_2",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_1.png",
+                "name": "IMAGE_FONT3_1",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font3_0.png",
+                "name": "IMAGE_FONT3_0",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_9.png",
+                "name": "IMAGE_FONT4_9",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_8.png",
+                "name": "IMAGE_FONT4_8",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_7.png",
+                "name": "IMAGE_FONT4_7",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_6.png",
+                "name": "IMAGE_FONT4_6",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_5.png",
+                "name": "IMAGE_FONT4_5",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_4.png",
+                "name": "IMAGE_FONT4_4",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_3.png",
+                "name": "IMAGE_FONT4_3",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_2.png",
+                "name": "IMAGE_FONT4_2",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_1.png",
+                "name": "IMAGE_FONT4_1",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font4_0.png",
+                "name": "IMAGE_FONT4_0",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_9.png",
+                "name": "IMAGE_FONT5_9",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_8.png",
+                "name": "IMAGE_FONT5_8",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_7.png",
+                "name": "IMAGE_FONT5_7",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_6.png",
+                "name": "IMAGE_FONT5_6",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_5.png",
+                "name": "IMAGE_FONT5_5",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_4.png",
+                "name": "IMAGE_FONT5_4",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_3.png",
+                "name": "IMAGE_FONT5_3",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_2.png",
+                "name": "IMAGE_FONT5_2",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_1.png",
+                "name": "IMAGE_FONT5_1",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font5_0.png",
+                "name": "IMAGE_FONT5_0",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_9.png",
+                "name": "IMAGE_FONT6_9",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_8.png",
+                "name": "IMAGE_FONT6_8",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_7.png",
+                "name": "IMAGE_FONT6_7",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_6.png",
+                "name": "IMAGE_FONT6_6",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_5.png",
+                "name": "IMAGE_FONT6_5",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_4.png",
+                "name": "IMAGE_FONT6_4",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_3.png",
+                "name": "IMAGE_FONT6_3",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_2.png",
+                "name": "IMAGE_FONT6_2",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_1.png",
+                "name": "IMAGE_FONT6_1",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font6_0.png",
+                "name": "IMAGE_FONT6_0",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_9.png",
+                "name": "IMAGE_FONT7_9",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_8.png",
+                "name": "IMAGE_FONT7_8",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_7.png",
+                "name": "IMAGE_FONT7_7",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_6.png",
+                "name": "IMAGE_FONT7_6",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_5.png",
+                "name": "IMAGE_FONT7_5",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_4.png",
+                "name": "IMAGE_FONT7_4",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_3.png",
+                "name": "IMAGE_FONT7_3",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_2.png",
+                "name": "IMAGE_FONT7_2",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_1.png",
+                "name": "IMAGE_FONT7_1",
+                "type": "bitmap"
+            },
+            {
+                "file": "images/font7_0.png",
+                "name": "IMAGE_FONT7_0",
                 "type": "bitmap"
             },
             {
@@ -130,7 +380,7 @@
         "basalt"
     ],
     "uuid": "0ab44772-4fc2-45f5-981d-0014f2f5f7b7",
-    "versionLabel": "1.6",
+    "versionLabel": "1.7",
     "watchapp": {
         "watchface": true
     }
